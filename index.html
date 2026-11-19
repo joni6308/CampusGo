@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampusGo — Rathinam Global University Ordering</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="brand">
+        <span class="logo">CampusGo</span>
+        <span class="sub">Rathinam Campus Food &amp; Essentials</span>
+      </div>
+      <button id="cart-btn" class="cart-btn">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Skip the Canteen Queue</h1>
+        <p>Order fresh food, snacks, and stationery across Rathinam campus blocks for quick pickup.</p>
+        <div class="controls">
+          <input type="text" id="search-input" placeholder="Search food, coffee, snacks..." />
+          <div class="filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="meals">Meals</button>
+            <button class="filter-btn" data-category="snacks">Snacks</button>
+            <button class="filter-btn" data-category="drinks">Drinks</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu-grid" class="menu-grid"></section>
+    </main>
+
+    <!-- Cart Drawer -->
+    <aside id="cart-drawer" class="cart-drawer hidden">
+      <div class="cart-header">
+        <h2>Your Order</h2>
+        <button id="close-cart" class="close-btn">&times;</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <label for="pickup-point">Pickup Location</label>
+        <select id="pickup-point">
+          <option value="Main Canteen">Main Canteen</option>
+          <option value="Tech Park Cafe">Tech Park Cafe</option>
+          <option value="Library Kiosk">Library Kiosk</option>
+        </select>
+        <div class="total-row">
+          <span>Total</span>
+          <strong>₹<span id="cart-total">0</span></strong>
+        </div>
+        <button id="checkout-btn" class="checkout-btn">Place Order</button>
+      </div>
+    </aside>
+
+    <script src="app.js"></script>
+  </body>
+</html>
